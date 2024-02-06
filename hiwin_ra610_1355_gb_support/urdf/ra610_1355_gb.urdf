@@ -122,14 +122,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/visual/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/collision/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -142,14 +142,14 @@
     <visual>
       <origin xyz="-0.0 0.0 -0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link1_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/visual/link1_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin xyz="-0.0 0.0 -0.0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link1_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/collision/link1_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -162,14 +162,14 @@
     <visual>
       <origin xyz="-0.106 -0.14 -0.257" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link2_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/visual/link2_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin xyz="-0.106 -0.14 -0.257" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link2_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/collision/link2_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -182,14 +182,14 @@
     <visual>
       <origin xyz="-0.136 -0.14 -0.897" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link3_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/visual/link3_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin xyz="-0.136 -0.14 -0.897" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link3_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/collision/link3_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -202,14 +202,14 @@
     <visual>
       <origin xyz="0.0 -0.2895 -1.057" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link4_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/visual/link4_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin xyz="0.0 -0.2895 -1.057" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link4_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/collision/link4_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -222,14 +222,14 @@
     <visual>
       <origin xyz="0.001 -0.8065 -1.057" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link4_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/visual/link4_v1__1__1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin xyz="0.001 -0.8065 -1.057" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link4_v1__1__1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/collision/link4_v1__1__1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -242,14 +242,14 @@
     <visual>
       <origin xyz="0.002 -0.8065 -0.974" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link5_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/visual/link5_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
       <origin xyz="0.002 -0.8065 -0.974" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://combine_description/meshes/link5_v1_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/ra610_1355/collision/link5_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
