@@ -7,7 +7,7 @@
   <!-- links: main serial chain -->
   <link name="base_link">
     <visual>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/visual/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -16,7 +16,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/collision/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -24,7 +24,7 @@
   </link>
   <link name="link_1">
     <visual>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/visual/link_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -33,7 +33,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/collision/link_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -41,7 +41,7 @@
   </link>
   <link name="link_2">
     <visual>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/visual/link_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -50,7 +50,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/collision/link_2.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -58,7 +58,7 @@
   </link>
   <link name="link_3">
     <visual>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/visual/link_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -67,7 +67,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/collision/link_3.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -75,7 +75,7 @@
   </link>
   <link name="link_4">
     <visual>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/visual/link_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -84,7 +84,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/collision/link_4.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -92,7 +92,7 @@
   </link>
   <link name="link_5">
     <visual>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/visual/link_5.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -101,7 +101,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/collision/link_5.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -109,7 +109,7 @@
   </link>
   <link name="link_6">
     <visual>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/visual/link_6.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -118,7 +118,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
+      <origin rpy="0 0 1.57079632679" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://hiwin_ra610_1476_support/meshes/ra610_1476/collision/link_6.stl" scale="0.001 0.001 0.001"/>
       </geometry>
