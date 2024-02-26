@@ -7,7 +7,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/visual/base_link.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/visual/base_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="Black">
                 <color rgba="0.0 0.0 0.0 1.0"/>
@@ -16,7 +16,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/collision/base_link.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/collision/base_link.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -25,7 +25,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/visual/link_1.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/visual/link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.999 0.999 0.999 1.0"/>
@@ -34,7 +34,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/collision/link_1.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/collision/link_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -43,7 +43,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/visual/link_2.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/visual/link_2.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.999 0.999 0.999 1.0"/>
@@ -52,7 +52,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/collision/link_2.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/collision/link_2.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -61,7 +61,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/visual/link_3.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/visual/link_3.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.999 0.999 0.999 1.0"/>
@@ -70,7 +70,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/collision/link_3.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/collision/link_3.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -79,7 +79,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/visual/link_4.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/visual/link_4.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.999 0.999 0.999 1.0"/>
@@ -88,7 +88,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/collision/link_4.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/collision/link_4.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -97,7 +97,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/visual/link_5.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/visual/link_5.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.999 0.999 0.999 1.0"/>
@@ -106,7 +106,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/collision/link_5.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/collision/link_5.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -115,7 +115,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/visual/link_6.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/visual/link_6.stl" scale="0.001 0.001 0.001"/>
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.999 0.999 0.999 1.0"/>
@@ -124,7 +124,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
             <geometry>
-                <mesh filename="package://hiwin_ra610_1355_gb_support/meshes/collision/link_6.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://hiwin_ra610_1476_gc_support/meshes/collision/link_6.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
