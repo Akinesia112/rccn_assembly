@@ -1,2 +1,2 @@
 # rccn_assembly
-URDF
+Developed Graph Reinforcement Learning to Optimize Brick Assembly Sequencing with Automatic Construction by a Mobile Manipulator 
