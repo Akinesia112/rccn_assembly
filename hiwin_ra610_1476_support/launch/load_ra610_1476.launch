@@ -1,0 +1,5 @@
+<launch>
+  <arg name="robot_description" default="robot_description"/>
+
+  <param name="$(arg robot_description)" command="$(find xacro)/xacro.exe --inorder  $(find hiwin_ra605_1476_support)/urdf\ra605_1476.xacro"/>
+</launch>
