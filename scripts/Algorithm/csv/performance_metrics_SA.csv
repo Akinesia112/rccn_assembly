@@ -1,0 +1,5 @@
+Iterations,Min Time,Max Time,Solution Time Size and Complexity,Space Required,Solution Space Size and Complexity,Precision Requirements,Resource Availability
+100,9223372036854775807,0,9223372036854775807,0,63,0.0,"CPU: 5.3%, Memory: 64.0%"
+500,9223372036854775807,0,9223372036854775807,0,63,0.0,"CPU: 5.3%, Memory: 64.0%"
+1000,9223372036854775807,0,9223372036854775807,4096,63,0.0,"CPU: 5.3%, Memory: 64.0%"
+5000,9223372036854775807,0,9223372036854775807,0,63,0.0,"CPU: 5.3%, Memory: 64.0%"
