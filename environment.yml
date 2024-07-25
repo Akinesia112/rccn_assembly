@@ -1,0 +1,18 @@
+name: rccn_assembly
+channels:
+  - conda-forge
+  - cvxgrp
+  - IBMDecisionOptimization
+dependencies:
+  - python=3.10
+  - pip
+  - compas
+  - compas_view2
+  - compas_fab
+  - shapely
+  - cvxopt
+  - cvxpy
+  - pip:
+    - -r requirements.txt
+
+
