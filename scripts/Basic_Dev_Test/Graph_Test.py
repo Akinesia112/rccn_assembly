@@ -130,16 +130,16 @@ def visualize_forces(interface, viewer):
         #viewer.add(line, linecolor=(0, 0, 0), linewidth=2)  # Black for contact forces
 
     # Visualize compression forces
-    for line in interface.compressionforces:
-        viewer.add(line, linecolor=(0.678, 0.847, 0.902), linewidth=2) # Light Blue (r, g, b), (173, 216, 230) for compression forces
+    #for line in interface.compressionforces:
+        #viewer.add(line, linecolor=(0.678, 0.847, 0.902), linewidth=2) # Light Blue (r, g, b), (173, 216, 230) for compression forces
 
     # Visualize tension forces
-    for line in interface.tensionforces:
-        viewer.add(line, linecolor=(1.0, 0, 0), linewidth=2)  # Red for tension forces
+    #for line in interface.tensionforces:
+        #viewer.add(line, linecolor=(1.0, 0, 0), linewidth=2)  # Red for tension forces
 
     # Visualize friction forces
-    for line in interface.frictionforces:
-        viewer.add(line, linecolor=(0.0, 1.0, 0.0), linewidth=2)  # Green for friction forces
+    #for line in interface.frictionforces:
+        #viewer.add(line, linecolor=(0.0, 1.0, 0.0), linewidth=2)  # Green for friction forces
 
     # Visualize resultant forces
     #for line in interface.resultantforce:
@@ -178,7 +178,9 @@ def visualize_assembly(assembly):
     print(network.summary())
     viewer.add(network)
 
-    viewer.view.camera.distance = 100 
+    viewer.view.camera.scale = 1000
+    viewer.view.camera.position = [3000, 3000, 3000]
+    viewer.view.camera.distance = 1000
 
     viewer.run()
     
@@ -186,8 +188,8 @@ def visualize_assembly(assembly):
 # Load the assembly
 CWD = pathlib.Path(__file__).parent.absolute()
 cwd = pathlib.Path(__file__).parent.absolute()
-test_2_file = CWD.parent.parent / "output" / "assembly_interface_from_rhino_test_2.json"
-collapse_file = CWD.parent.parent  / "output" / "assembly_interface_from_rhino_collapse.json"
+test_2_file = CWD.parent.parent / "scripts" / "output" / "assembly_interface_from_rhino_hexa.json"
+collapse_file = CWD.parent.parent  / "scripts" / "output" / "assembly_interface_from_rhino_collapse.json"
 
 '''
 # Load the assembly from JSON by forloop

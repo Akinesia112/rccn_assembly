@@ -8,7 +8,7 @@ import compas_fab
 compas.PRECISION = '12f'
 
 # Locate the URDF file inside compas fab installation
-path = r"D:\RCCN_Assembly\rccn_assembly\hiwin_ra620_1621_support\urdf\ra620_1621.urdf"
+path = r"D:\RCCN_Assembly\rccn_assembly\scripts\Data\hiwin_ra610_1476_support\urdf\ra610_1476.urdf"
 urdf = compas_fab.get(path)
 
 # Create robot model from URDF

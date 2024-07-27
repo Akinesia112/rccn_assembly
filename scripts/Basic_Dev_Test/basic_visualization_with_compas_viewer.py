@@ -6,7 +6,7 @@ from compas_view2.objects import Collection
 from compas.geometry import Scale
 
 CWD = pathlib.Path(__file__).parent.absolute()
-FILE = CWD.parent / "output" / "assembly_interface_from_rhino_1108.json"
+FILE = CWD.parent.parent / "scripts" / "output" / "assembly_interface_from_rhino_hexa.json"
 
 assembly = Assembly.from_json(FILE)
 
@@ -23,6 +23,8 @@ for node in assembly.graph.nodes():
 network = Network.from_networkx(assembly.graph.to_networkx())
 print(network.summary())
 viewer.add(network)
-viewer.add(Collection(polygons), facecolor=(0.3,0,0.3))
+viewer.add(Collection(polygons), facecolor=(0,0,0), opacity=0.5)
 viewer.view.camera.scale = 2000
+viewer.view.camera.position = [3000, 3000, 3000]
+viewer.view.camera.distance = 1000
 viewer.show()

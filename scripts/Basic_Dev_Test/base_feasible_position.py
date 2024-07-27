@@ -89,7 +89,10 @@ frames = [Frame(position, [1, 0, 0], [0, 1, 0]) for position in normalized_posit
 # D:\anaconda3\envs\rccn_assembly\Lib\site-packages\compas_fab\data\universal_robot\ur_description\urdf\ur5.urdf
 # ---------------------------------------------------------------
 #urdf_filename =  r'D:\RCCN_Assembly\rccn_assembly\hiwin_ra620_1621_support\urdf\ra620_1621.urdf'
-urdf_filename = r"C:\Users\Acer\Downloads\urdf_model-main\urdf_model-main\hiwin_robot_arm\combine_description\hiwin_arm\Hiwin_RA610_1476_GC.urdf"
+
+#urdf_filename = r"D:\RCCN_Assembly\rccn_assembly\hiwin_ra610_1476_gc_support\urdf\ra610_1476_gc.urdf"
+urdf_filename = r"D:\RCCN_Assembly\rccn_assembly\scripts\Data\hiwin_ra610_1476_support\urdf\ra610_1476.urdf"
+
 # use PyBullet to compute the inverse kinematics
 with PyBulletClient(connection_type='direct') as client:
     robot = client.load_robot(urdf_filename)
