@@ -9,7 +9,7 @@ import csv
 
 # 载入组装
 CWD = pathlib.Path(__file__).parent.absolute()
-FILE = CWD.parent.parent / "output" / "assembly_interface_from_rhino_test_2.json"
+FILE = CWD.parent.parent / "scripts" / "output" / "assembly_interface_from_rhino_dome.json"
 assembly = Assembly.from_json(FILE)
 
 # 初始化视图器
@@ -49,7 +49,7 @@ start_time = time.time()
 animation_delay = 5  # 延迟时间（秒）
 
 # 定义更新视图的函数
-@viewer.on(interval=10)  # 每n毫秒调用一次函数
+@viewer.on(interval=500)  # 每n毫秒调用一次函数
 def update_view(frame):
     if time.time() - start_time < animation_delay:
         return  # 如果未达到延迟时间，不执行任何操作
@@ -91,7 +91,6 @@ with open(csv_file, 'w', newline='') as file:
 # 设置视图器的相机位置和缩放
 viewer.view.camera.scale = 1000
 viewer.view.camera.position = [3000, 3000, 3000]
-viewer.view.camera.distance = 300
-
+viewer.view.camera.distance = 1000
 # 运行视图器
 viewer.run()

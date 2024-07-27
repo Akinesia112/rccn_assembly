@@ -35,9 +35,9 @@ performance_metrics = {
     "Resource Availability": f"CPU: {psutil.cpu_percent()}%, Memory: {psutil.virtual_memory().percent}%"
 }
 
-# Simulation annealing
+# 模拟退火算法
 def simulated_annealing(graph, iterations):
-    start_time = time.time()  # start time of algorithm 
+    start_time = time.time()  # 算法开始时间
     current_path = list(graph.nodes())
     current_cost = path_cost(graph, current_path)
     temperature = 0.5
@@ -55,7 +55,7 @@ def simulated_annealing(graph, iterations):
             new_cost = path_cost(graph, new_path)
             forces = calculate_forces_on_interfaces(assembly)
 
-            # Adjust the path costs 
+            # 调整路径代价
             force_adjustment = forces["contact"] + forces["compression"] + forces["tension"] + forces["friction"] + forces["resultant"]
             new_cost_adjusted = new_cost * (1 + force_adjustment)
 

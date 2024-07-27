@@ -9,15 +9,12 @@ import csv
 
 # 载入组装
 CWD = pathlib.Path(__file__).parent.absolute()
-FILE = CWD.parent.parent / "output" / "assembly_interface_from_rhino_bulges.json"
+FILE = CWD.parent.parent / "scripts" /  "output" / "assembly_interface_from_rhino_dome.json"
 assembly = Assembly.from_json(FILE)
-
 # 初始化视图器
 viewer = App(width=2000, height=1000)
-
 # 转换为无向图
 undirected_graph = assembly.graph.to_networkx().to_undirected()
-
 # 性能指标初始化
 performance_metrics_dfs = {
     "Space Required": 0,
@@ -49,7 +46,7 @@ def depth_first_search(graph, start_node):
     space_required = final_memory_usage - initial_memory_usage
 
     performance_metrics_dfs["Total Time"] = total_time
-    performance_metrics_dfs["Space Required"] = space_required
+    performance_metrics_dfs["Space Required"] = space_required # in bytes
 
     return path
 
@@ -65,7 +62,7 @@ for key, value in performance_metrics_dfs.items():
 added_blocks = {}
 
 # 定义更新视图的函数
-@viewer.on(interval=10)
+@viewer.on(interval=500)
 def update_view(frame):
     if dfs_path:
         current_node = dfs_path.pop(0)
@@ -86,7 +83,7 @@ with open(csv_file, 'w', newline='') as file:
 # 设置视图器的相机位置和缩放
 viewer.view.camera.scale = 1000
 viewer.view.camera.position = [2000, 2000, 2000]
-viewer.view.camera.distance = 300
+viewer.view.camera.distance = 1000
 
 # 运行视图器
 viewer.run()

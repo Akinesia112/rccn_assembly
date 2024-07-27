@@ -65,6 +65,7 @@ def ant_colony_optimization(graph):
     if best_path is None:
         best_path = list(graph.nodes())
 
+
     return best_path
 
 # 生成单个蚂蚁的路径

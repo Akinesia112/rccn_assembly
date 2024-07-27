@@ -14,7 +14,7 @@ import compas.datastructures as cd
 from compas_view2.shapes import Text
 
 CWD = pathlib.Path(__file__).parent.absolute()
-FILE = CWD.parent / "output" / "assembly_interface_from_rhino_door.json"
+FILE = CWD.parent.parent / "scripts" / "output" / "assembly_interface_from_rhino_demo.json"
 assembly = Assembly.from_json(FILE)
 
 

@@ -37,64 +37,38 @@ performance_metrics = {
 
 # 蚁群算法参数
 num_ants = 100  # 蚂蚁数量
-pheromone_evaporation = 0.1  # 信息素蒸发率
 pheromone_deposit = 0.3  # 信息素沉积量
+alpha = 1.0  # 信息素重要程度
+beta =  3.0  # 启发式因子重要程度
+evaporation_rate = 0.2  # 信息素蒸发率
 
 # 初始化信息素
 pheromones = {edge: 1.0 for edge in undirected_graph.edges()}
 
-
-# 初始化信息素
 pheromones = {}
 for edge in undirected_graph.edges():
     pheromones[edge] = 1.0
     pheromones[(edge[1], edge[0])] = 1.0  # 添加边的反方向
 
-# 计算路径代价
-def path_cost(graph, path):
-    cost = 0
-    for i in range(len(path) - 1):
-        cost += nx.shortest_path_length(graph, path[i], path[i + 1], weight='weight')
-    return cost
-
-def ant_colony_optimization(graph, num_iterations):
-    start_time = time.time()
-    best_path = None
-    best_cost = float('inf')
-
-    for _ in range(num_iterations):
-        paths = [generate_path(graph) for _ in range(num_ants)]
-        update_pheromones(paths)
-
-        for path in paths:
-            cost = path_cost(graph, path)
-            if cost < best_cost:
-                best_path, best_cost = path, cost
-
-    end_time = time.time()
-    total_time = end_time - start_time
-
-    return best_path, best_cost, total_time
-
-
 # 生成单个蚂蚁的路径
-def generate_path(graph):
+def generate_ant_path(graph, pheromones, alpha, beta):
     path = []
-    unvisited = set(graph.nodes())  # 创建一个包含所有未访问节点的集合
-    current_node = random.choice(list(graph.nodes))
+    unvisited = set(graph.nodes())  # Create a set containing all unvisited nodes
+    current_node = random.choice(list(graph.nodes()))
     path.append(current_node)
     unvisited.remove(current_node)
 
     while unvisited:
-        next_node = choose_next_node(graph, current_node, unvisited)
+        next_node = choose_next_node(graph, current_node, unvisited, pheromones)  # Corrected argument count
         path.append(next_node)
         unvisited.remove(next_node)
         current_node = next_node
 
     return path
 
+
 # 根据信息素选择下一个节点
-def choose_next_node(graph, current_node, unvisited):
+def choose_next_node(graph, current_node, unvisited, pheromones):
     neighbors = [n for n in graph.neighbors(current_node) if n in unvisited]
     if not neighbors:
         return random.choice(list(unvisited))  # 如果没有未访问的邻居，随机选择一个未访问的节点
@@ -106,19 +80,71 @@ def choose_next_node(graph, current_node, unvisited):
     return random.choices(neighbors, probabilities, k=1)[0]
 
 # 更新信息素
-def update_pheromones(paths):
-    for edge in pheromones:
-        pheromones[edge] *= (1 - pheromone_evaporation)
+def update_pheromone_matrix(pheromone_matrix, ant_paths, ant_costs, evaporation_rate):
+    for edge in pheromone_matrix:
+        pheromone_matrix[edge] *= (1 - evaporation_rate)
 
-    for path in paths:
+    for path, cost in zip(ant_paths, ant_costs):
         for i in range(len(path) - 1):
             edge = (path[i], path[i + 1])
             reverse_edge = (path[i + 1], path[i])
-            if edge in pheromones:
-                pheromones[edge] += pheromone_deposit
-            elif reverse_edge in pheromones:
-                pheromones[reverse_edge] += pheromone_deposit
+            if edge in pheromone_matrix:
+                pheromone_matrix[edge] += 1.0 / cost
+            elif reverse_edge in pheromone_matrix:
+                pheromone_matrix[reverse_edge] += 1.0 / cost
+    return pheromone_matrix
+   
+def ant_colony(graph, iterations, num_ants, alpha, beta, evaporation_rate):
+    start_time = time.time()  # 算法开始时间
+
+    pheromone_levels = initialize_pheromone_matrix(graph)
+    best_path = None
+    best_cost = float('inf')
+    costs = []
+
+    for _ in range(iterations):
+        ant_paths = []
+        ant_costs = []
+        for ant in range(num_ants):
+            current_path = generate_ant_path(graph, pheromone_levels, alpha, beta)
+            current_cost = path_cost(graph, current_path)
+            ant_paths.append(current_path)
+            ant_costs.append(current_cost)
+
+            if current_cost < best_cost:
+                best_path = current_path
+                best_cost = current_cost
+            
+        update_pheromone_matrix(pheromone_levels, ant_paths, ant_costs, evaporation_rate)
+        costs.append(best_cost)
     
+    end_time = time.time()  # 算法结束时间
+    total_time = end_time - start_time  # 总运行时间   
+
+    return best_path, costs, total_time
+
+def initialize_pheromone_matrix(graph):
+    pheromone_matrix = {}
+    undirected_graph = graph.to_undirected()  # Convert the directed graph to an undirected graph
+
+    for edge in undirected_graph.edges():
+        pheromone_matrix[edge] = 1.0
+        pheromone_matrix[(edge[1], edge[0])] = 1.0  # Add the reverse edge
+    return pheromone_matrix
+
+
+def path_cost(graph, path):
+    cost = 0
+    for i in range(len(path) - 1):
+        # 假设成本是路径中连续节点间的距离，可以根据实际情况调整
+        if graph.has_edge(path[i], path[i + 1]):
+            edge_data = graph.get_edge_data(path[i], path[i + 1])
+            cost += edge_data.get('weight', 1)  # 如果没有提供权重，可以默认为1
+        else:
+            cost += float('inf')  # 如果路径不连续，返回无限大的成本
+    return cost
+
+
 # 缓存接口力的计算结果
 forces_cache = {}
 
@@ -150,10 +176,9 @@ def calculate_forces_on_interfaces(assembly):
 def run_experiments(graph, iterations_list):
     results = {}
     for iter_count in iterations_list:
-        best_path, best_cost, total_time = ant_colony_optimization(graph, iter_count)
-        results[iter_count] = (best_cost, total_time)
+        path, costs, total_time = ant_colony(graph, iter_count, num_ants, alpha, beta, evaporation_rate)
+        results[iter_count] = (costs, total_time)
     return results
-
 
 # 绘制收敛图
 def plot_convergence(results, save_path):
@@ -173,7 +198,6 @@ def plot_convergence(results, save_path):
     ax.set_ylabel("Cost", fontsize=10, alpha=0.7)
     ax.set_title("Convergence Over Iterations of Ant Colony Optimization", fontsize=12, alpha=0.7)
     ax.legend()
-    plt.xlim(0, max(iterations_list))  # 确保 x 轴覆盖所有迭代
 
     # Set the opacity of all tick labels to 70%
     for label in (ax.get_xticklabels() + ax.get_yticklabels()):
@@ -197,7 +221,8 @@ for i in iterations_list:
     # 记录内存使用情况以计算所需空间
     initial_memory_usage = psutil.Process().memory_info().rss
     
-    full_path, _, total_time  = ant_colony_optimization(undirected_graph, i)  # 这里选择一个迭代次数
+    # 运行ACO算法
+    full_path, costs, total_time = ant_colony(undirected_graph, i, num_ants, alpha, beta, evaporation_rate)
     # 计算内存使用增加量
     final_memory_usage = psutil.Process().memory_info().rss
     performance_metrics["Space Required"] = final_memory_usage - initial_memory_usage
